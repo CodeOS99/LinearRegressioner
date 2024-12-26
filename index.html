@@ -1,0 +1,49 @@
+<!--my favourite part was when he said it's linearRegression-ering time-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Regression</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Linear Regressioner</h1>
+        <p>A tool to assist in linear regression. Try it!</p>
+
+        <div class="form">
+            <label for="training">Choose a training CSV file:</label>
+            <input type="file" accept=".csv" id="training" class="input-file"/>
+            <br>
+            <label for="testing">Choose a testing CSV file:</label>
+            <input type="file" accept=".csv" id="testing" class="input-file"/>
+            <br>
+            <label for="alpha">Alpha (Learning Rate):</label>
+            <input type="number" id="alpha" name="alpha" step="any" min="0" placeholder="Enter learning rate" class="input-field"/>
+            <br>
+            <label for="numIters">Number of Iterations:</label>
+            <input type="number" id="numIters" name="numIters" step="any" min="10" placeholder="Enter the number of iterations" class="input-field"/>
+            <br>
+            <label for="writing">Report every N iterations:</label>
+            <input type="number" id="writing" name="writing" step="any" min="10" placeholder="Enter the number of iterations after which progress should be reported" class="input-field"/>
+            <br>
+            <label>Write the final prediction for each test case?</label>
+            <input type="checkbox" id="verbose">
+            <br>
+            <label>Display number of iteration vs loss graph?</label>
+            <input type="checkbox" id="nvl">
+            <br>
+            <button id="submit" class="btn-submit">Linearly Regrate!</button>
+        </div>
+
+        <h2>Results</h2>
+        <div id="results" class="results"></div>
+        <canvas id="lossChart" width="400" height="200"></canvas>
+    </div>
+    <p>Don't know what linear regression is? <a href="https://en.wikipedia.org/wiki/Linear_regression">Click me!</a></p>
+    <script src="script.js"></script>
+</body>
+</html>
